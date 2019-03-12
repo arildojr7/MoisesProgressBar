@@ -1,6 +1,6 @@
 <idea-plugin>
-  <id>some.awesome</id>
-  <name>Nyan Progress Bar</name>
+  <id>moises.progressbar</id>
+  <name>Moises Progress Bar</name>
   <version>1.12</version>
   <vendor email="dmitry.batkovich@jetbrains.com">Dmitry Batkovich</vendor>
 
