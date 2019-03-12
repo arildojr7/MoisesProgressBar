@@ -16,9 +16,7 @@ import java.awt.event.ComponentEvent;
 import java.awt.geom.*;
 
 public class NyanProgressBarUi extends BasicProgressBarUI {
-    private static final float ONE_OVER_SEVEN = 1f / 7;
-    private static final Color VIOLET = new Color(90, 0, 157);
-
+    private static final float ONE_COLOR = 1f / 7;
 
     {
 
@@ -76,8 +74,8 @@ public class NyanProgressBarUi extends BasicProgressBarUI {
         if (!isEven(c.getHeight() - h)) h++;
 
         LinearGradientPaint baseRainbowPaint = new LinearGradientPaint(0, JBUI.scale(2), 0, h - JBUI.scale(6),
-                new float[]{ONE_OVER_SEVEN * 1, ONE_OVER_SEVEN * 2, ONE_OVER_SEVEN * 3, ONE_OVER_SEVEN * 4, ONE_OVER_SEVEN * 5, ONE_OVER_SEVEN * 6, ONE_OVER_SEVEN * 7},
-                new Color[]{Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.cyan, Color.blue, VIOLET});
+                new float[]{ONE_COLOR * 1, ONE_COLOR * 2, ONE_COLOR * 3, ONE_COLOR * 4, ONE_COLOR * 5, ONE_COLOR * 6, ONE_COLOR * 7},
+                new Color[]{Color.GRAY, Color.GRAY, Color.GRAY, Color.GRAY, Color.GRAY, Color.GRAY, Color.GRAY});
 
         g.setPaint(baseRainbowPaint);
 
@@ -91,7 +89,7 @@ public class NyanProgressBarUi extends BasicProgressBarUI {
 
 
 //        LinearGradientPaint baseRainbowPaint = new LinearGradientPaint(0, JBUI.scale(2), 0, h - JBUI.scale(6),
-//                new float[]{ONE_OVER_SEVEN * 1, ONE_OVER_SEVEN * 2, ONE_OVER_SEVEN * 3, ONE_OVER_SEVEN * 4, ONE_OVER_SEVEN * 5, ONE_OVER_SEVEN * 6, ONE_OVER_SEVEN * 7},
+//                new float[]{ONE_COLOR * 1, ONE_COLOR * 2, ONE_COLOR * 3, ONE_COLOR * 4, ONE_COLOR * 5, ONE_COLOR * 6, ONE_COLOR * 7},
 //                new Color[]{Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.cyan, Color.blue, VIOLET});
 
         Paint old = g.getPaint();
@@ -146,7 +144,7 @@ public class NyanProgressBarUi extends BasicProgressBarUI {
 
 //        g.setPaint(baseRainbowPaint);
 
-        Icon scaledIcon = velocity > 0 ? ((ScalableIcon) NyanIcons.CAT_ICON) : ((ScalableIcon) NyanIcons.RCAT_ICON) ;
+        Icon scaledIcon = velocity > 0 ? ((ScalableIcon) NyanIcons.VAI_MOISES) : ((ScalableIcon) NyanIcons.VOLTA_MOISES) ;
 //        if (velocity < 0) {
 //            scaledIcon = new ReflectedIcon(scaledIcon);
 //        }
@@ -212,10 +210,10 @@ public class NyanProgressBarUi extends BasicProgressBarUI {
         g2.fill(new RoundRectangle2D.Float(off, off, w - 2f*off - off, h - 2f*off - off, R, R));
 //        g2.setColor(progressBar.getForeground());
         g2.setPaint(new LinearGradientPaint(0, JBUI.scale(2), 0, h - JBUI.scale(6),
-                new float[]{ONE_OVER_SEVEN * 1, ONE_OVER_SEVEN * 2, ONE_OVER_SEVEN * 3, ONE_OVER_SEVEN * 4, ONE_OVER_SEVEN * 5, ONE_OVER_SEVEN * 6, ONE_OVER_SEVEN * 7},
-                new Color[]{Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.cyan, Color.blue, VIOLET}));
+                new float[]{ONE_COLOR * 1, ONE_COLOR * 2, ONE_COLOR * 3, ONE_COLOR * 4, ONE_COLOR * 5, ONE_COLOR * 6, ONE_COLOR * 7},
+                new Color[]{Color.GRAY, Color.GRAY, Color.GRAY, Color.GRAY, Color.GRAY, Color.GRAY, Color.GRAY}));
 
-        NyanIcons.CAT_ICON.paintIcon(progressBar, g2, amountFull - JBUI.scale(10), -JBUI.scale(6));
+        NyanIcons.VAI_MOISES.paintIcon(progressBar, g2, amountFull - JBUI.scale(10), -JBUI.scale(6));
         g2.fill(new RoundRectangle2D.Float(2f*off,2f*off, amountFull - JBUI.scale(5f), h - JBUI.scale(5f), JBUI.scale(7f), JBUI.scale(7f)));
         g2.translate(0, -(c.getHeight() - h)/2);
 
